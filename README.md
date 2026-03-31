@@ -72,7 +72,7 @@ Factually wrong. Chemo can cause cognitive issues ("chemo brain"), but Alzheimer
 
 Basic factual miss. This one persisted after adaptation.
 
-## What I learned
+## Laerning Outcomes
 
 The 24% to 67% jump on MedMCQA came from just 10% of the training data and 2 epochs. That surprised me. Domain data matters a lot for structured tasks, and you don't always need a ton of it.
 
