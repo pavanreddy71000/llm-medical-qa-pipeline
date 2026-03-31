@@ -1,6 +1,6 @@
 # Domain-Specific LLM Adaptation: Transformer Pipeline for Medical Question Answering
 
-I adapted Google's FLAN-T5 (an encoder-decoder transformer) to medical question answering using two benchmarks: PubMedQA for open-ended biomedical questions and MedMCQA for multiple-choice medical exam questions. The pipeline covers preprocessing, training, evaluation across six metrics, and a closer look at where the model hallucinates.
+Trained Google's FLAN-T5 (an encoder-decoder transformer) to medical question answering using two benchmarks: PubMedQA for open-ended biomedical questions and MedMCQA for multiple-choice medical exam questions. The pipeline covers preprocessing, training, evaluation across six metrics, and a closer look at where the model hallucinates.
 
 ## Why this project
 
