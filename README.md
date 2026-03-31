@@ -127,8 +127,3 @@ Python · PyTorch · HuggingFace Transformers · HuggingFace Datasets · TensorF
 - Jin et al. (2019). *PubMedQA: A Dataset for Biomedical Research Question Answering.*
 - Pal et al. (2022). *MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical Domain QA.*
 - Lee et al. *BioBERT: A Pre-trained Biomedical Language Representation Model.*
-
-## Author
-
-**Sai Pavan Reddy Doddam Reddy**
-M.S. in Computer Science, Southern Illinois University Carbondale
