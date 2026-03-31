@@ -105,7 +105,7 @@ One thing I didn't expect: multiple-choice was harder than open-ended in some wa
 ## How to reproduce
 
 ```bash
-git clone https://github.com/<your-username>/llm-medical-qa-pipeline.git
+git clone https://github.com/pavanreddy71000/llm-medical-qa-pipeline.git
 cd llm-medical-qa-pipeline
 pip install -r requirements.txt
 ```
