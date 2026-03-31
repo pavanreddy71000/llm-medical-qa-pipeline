@@ -114,19 +114,10 @@ Open `notebooks/llm_medical_qa.ipynb` in Google Colab or any Jupyter environment
 
 Model weights aren't in the repo (too large). The notebook reproduces them from scratch.
 
-## What I'd do next
-
-RAG is the obvious next step. Right now the model is answering from parametric memory, which is why it hallucinates. Grounding answers in actual retrieved medical literature would help a lot. Beyond that: trying larger FLAN-T5 variants with more data, adding clinical images as input, and exploring RLHF with domain experts to penalize hallucination directly during training.
-
 ## Tech stack
 
 Python · PyTorch · HuggingFace Transformers · HuggingFace Datasets · TensorFlow Hub · Google Colab
 
-## References
+## What I'd do next
 
-- Raffel et al. (2019). *Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.*
-- Chung et al. (2022). *Scaling Instruction-Finetuned Language Models.*
-- Jin et al. (2019). *PubMedQA: A Dataset for Biomedical Research Question Answering.*
-- Pal et al. (2022). *MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical Domain QA.*
-- Lee et al. *BioBERT: A Pre-trained Biomedical Language Representation Model.*
-
+RAG is the obvious next step. Right now the model is answering from parametric memory, which is why it hallucinates. Grounding answers in actual retrieved medical literature would help a lot. Beyond that: trying larger FLAN-T5 variants with more data, adding clinical images as input, and exploring RLHF with domain experts to penalize hallucination directly during training.
