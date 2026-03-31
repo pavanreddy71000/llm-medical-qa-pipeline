@@ -1,0 +1,29 @@
+{
+  "dataset": "MedMCQA",
+  "split": "train[:10%] for training, validation[:100] for evaluation",
+  "task_type": "multiple-choice QA (4 options)",
+  "model": "FLAN-T5-Base (google/flan-t5-base)",
+  "training_config": {
+    "batch_size": 4,
+    "learning_rate": 3e-4,
+    "epochs": 2,
+    "weight_decay": 0.01,
+    "max_input_length": 512,
+    "max_target_length": 128,
+    "hardware": "NVIDIA T4 (Google Colab)"
+  },
+  "base_model_metrics": {
+    "Accuracy": 0.24
+  },
+  "finetuned_model_metrics": {
+    "Accuracy": 0.67
+  },
+  "improvement": {
+    "Accuracy": "+43 pts (from random chance to meaningful performance)"
+  },
+  "notes": {
+    "baseline_context": "24% on a 4-choice MCQ is equivalent to random guessing (25% expected). The base model had no meaningful medical knowledge for this task format.",
+    "evaluation_choice": "Only accuracy is reported for MedMCQA because the task is deterministic — the model either picks the right option or it doesn't. ROUGE/BLEU/BERTScore are not meaningful for single-word or short-phrase MCQ answers.",
+    "error_patterns": "Common errors involved distractor options with high semantic overlap to the correct answer, and factual recall gaps on basic medical knowledge (e.g., vitamin deficiencies, anatomy functions)."
+  }
+}

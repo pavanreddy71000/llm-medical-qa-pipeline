@@ -1,0 +1,51 @@
+{
+  "dataset": "PubMedQA (pqa_labeled)",
+  "split": "train[:10%] for training, train[:100] for evaluation",
+  "task_type": "open-ended generative QA",
+  "model": "FLAN-T5-Base (google/flan-t5-base)",
+  "training_config": {
+    "batch_size": 4,
+    "learning_rate": 3e-4,
+    "epochs": 2,
+    "weight_decay": 0.01,
+    "max_input_length": 512,
+    "max_target_length": 128,
+    "hardware": "NVIDIA T4 (Google Colab)"
+  },
+  "base_model_metrics": {
+    "ROUGE-1": 0.1753,
+    "ROUGE-2": 0.0645,
+    "ROUGE-L": 0.1437,
+    "BLEU": 0.0044,
+    "F1_Score": 0.1380,
+    "Exact_Match": 0.00,
+    "BERTScore_F1": 0.8462,
+    "USEScore": 0.3191
+  },
+  "finetuned_model_metrics": {
+    "ROUGE-1": 0.2621,
+    "ROUGE-2": 0.0943,
+    "ROUGE-L": 0.2021,
+    "BLEU": 0.0232,
+    "F1_Score": 0.2048,
+    "Exact_Match": 0.00,
+    "BERTScore_F1": 0.8783,
+    "USEScore": 0.4421
+  },
+  "improvement": {
+    "ROUGE-1": "+8.68 pts",
+    "ROUGE-2": "+2.98 pts",
+    "ROUGE-L": "+5.84 pts",
+    "BLEU": "+1.88 pts",
+    "F1_Score": "+0.067",
+    "Exact_Match": "no change (expected for abstractive QA)",
+    "BERTScore_F1": "+0.032",
+    "USEScore": "+0.123"
+  },
+  "notes": {
+    "Exact_Match": "Both models scored 0.0, which is expected — PubMedQA answers are free-form and abstractive, so exact string match is not a meaningful metric here. Included as a hallucination proxy.",
+    "BLEU": "Low scores across the board are expected. BLEU was designed for translation, not open-ended QA where many valid phrasings exist.",
+    "BERTScore": "Uses contextual BERT embeddings. More forgiving of valid paraphrases than ROUGE/BLEU, but can mask factual errors if the wrong answer is semantically close to the right one.",
+    "USEScore": "Cosine similarity via Universal Sentence Encoder. Best single indicator of overall semantic alignment for long-form answers."
+  }
+}
