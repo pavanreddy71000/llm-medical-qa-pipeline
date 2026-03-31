@@ -96,7 +96,9 @@ One thing I didn't expect: multiple-choice was harder than open-ended in some wa
 │   ├── medmcqa_metrics.json
 │   └── sample_predictions.md      # More examples with assessments
 ├── images/
-│   └── pipeline_overview.png
+│   ├── pipeline_overview.png
+│   ├── pubmedqa_comparison.png
+│   └── medmcqa_accuracy.png
 └── requirements.txt
 ```
 
@@ -128,7 +130,3 @@ Python · PyTorch · HuggingFace Transformers · HuggingFace Datasets · TensorF
 - Pal et al. (2022). *MedMCQA: A Large-scale Multi-Subject Multi-Choice Dataset for Medical Domain QA.*
 - Lee et al. *BioBERT: A Pre-trained Biomedical Language Representation Model.*
 
-## Author
-
-**Sai Pavan Reddy Doddam Reddy**
-M.S. in Computer Science, Southern Illinois University Carbondale
