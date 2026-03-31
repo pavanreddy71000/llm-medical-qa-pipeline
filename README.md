@@ -118,6 +118,6 @@ Model weights aren't in the repo (too large). The notebook reproduces them from 
 
 Python · PyTorch · HuggingFace Transformers · HuggingFace Datasets · TensorFlow Hub · Google Colab
 
-## What I'd do next
+## Next Steps
 
 RAG is the obvious next step. Right now the model is answering from parametric memory, which is why it hallucinates. Grounding answers in actual retrieved medical literature would help a lot. Beyond that: trying larger FLAN-T5 variants with more data, adding clinical images as input, and exploring RLHF with domain experts to penalize hallucination directly during training.
